@@ -4,8 +4,9 @@ const isProjectPage = process.env.GITHUB_ACTIONS === "true" && repoName !== `${p
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  images: { unoptimized: true },
-  ...(isProjectPage ? { basePath: `/${repoName}`, assetPrefix: `/${repoName}/` } : {}),
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
